@@ -1,0 +1,32 @@
+import math
+
+class RegularPolygon():
+    def __init__(self=1,n=3,side=1,x=0,y=0):#self default is one, n is number OF SIDES is three, side is legnth of sides, x and y default is 0
+        self.n = n
+        self.side = side
+        self.x = x
+        self.y = y
+         
+    def getPerimeter(self):
+        return self.n ** 2
+   
+    def getArea(self):
+        return ((self.n)*((self.side)**2)) / (4*(math.tan(math.pi/self.n)))
+    
+
+#########################################################################################################################
+    
+   
+def main():
+    polygon_1=RegularPolygon()
+    polygon_2=RegularPolygon(6,4)
+    polygon_3=RegularPolygon(10,4,5.6,7.8)
+  
+    print("The first polygons perimeter is:",polygon_1.getPerimeter(),"\n polygon1 Area is:",polygon_1.getArea())
+    print("The second polygons perimeter is:",polygon_2.getPerimeter(),"\n polygon2 Area is:",polygon_2.getArea())
+    print("The third polygons perimeter is:",polygon_3.getPerimeter(),"\n polygon_3 Area is:",polygon_3.getArea())
+
+
+
+
+main()
